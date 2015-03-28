@@ -1,0 +1,560 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\setbeamertemplate{navigation symbols}{}
+\setlength{\paperwidth}{155 mm}
+\setlength{\paperheight}{96 mm}
+\setlength{\textwidth}{135 mm}
+\setlength{\textheight}{86 mm}
+\usecolortheme[RGB={52,54,62}]{structure} 
+\usetheme[height=14mm]{Rochester}
+\usepackage{textpos}
+
+\date{August 30, 2012}
+
+
+\setbeamertemplate{frametitle}[default][right]
+\addtobeamertemplate{frametitle}{\vspace{-1.5\baselineskip}}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(-0.5cm,-1cm)
+\end{textblock*}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Local Propagation Networks
+\end_layout
+
+\begin_layout Author
+Daniel Holz
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Nodes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename node.png
+	width 6.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Itemize
+Multiple connectors
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Operands
+\end_layout
+
+\begin_layout Itemize
+Result
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Notified when attached wires change
+\end_layout
+
+\begin_layout Itemize
+Sets attached wires if value can be deduced
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Wires
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename wire.png
+	width 6.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Itemize
+Multiple attachments
+\end_layout
+
+\begin_layout Itemize
+Value set by a node
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Only that node can subsequently change
+\end_layout
+
+\begin_layout Itemize
+Setter node can't check existing value
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Notifies attached nodes when value changes
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Convert Celcius and Fahrenheit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+f & = & \frac{9}{5}c+32
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+c & =\dfrac{5(f-32)}{9}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Local Propagation Network
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename 1.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+104 Fahrenheit to Celcius
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename 1.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{itemize}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\backslash
+only<1>{ i = ? } 
+\backslash
+only<2->{ i = 104 }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item j = 32
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\backslash
+only<1-2>{ k = ? } 
+\backslash
+only<3->{ k = 72 }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item l = 5/9
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\backslash
+only<1-3>{ m = ? } 
+\backslash
+only<4->{ m = 40 }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+100 Celcius to Fahrenheit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename 1.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{itemize}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\backslash
+only<1-3>{ i = ? } 
+\backslash
+only<4->{ i = 212 }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item j = 32
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\backslash
+only<1-2>{ k = ? } 
+\backslash
+only<3->{ k = 180 }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item l = 5/9
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\backslash
+only<1>{ m = ? } 
+\backslash
+only<2->{ m = 100 }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Adding Kelvin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename 2.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
